@@ -1,12 +1,15 @@
 package pl.pelipe.petclinic.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
+/**
+ * Created by jt on 7/13/18.
+ */
 public class Pet {
 
     private PetType petType;
     private Owner owner;
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 
     public PetType getPetType() {
         return petType;
@@ -24,11 +27,11 @@ public class Pet {
         this.owner = owner;
     }
 
-    public LocalDateTime getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDateTime birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 }
