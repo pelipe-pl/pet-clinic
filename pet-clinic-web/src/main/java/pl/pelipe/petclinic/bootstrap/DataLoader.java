@@ -26,13 +26,11 @@ public class DataLoader implements CommandLineRunner {
         Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
         Owner owner1 = new Owner();
-        owner1.setId(1L);
         owner1.setFirstName("Chuck");
         owner1.setLastName("Norris");
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(2L);
         owner2.setFirstName("Don");
         owner2.setLastName("Johnson");
         ownerService.save(owner2);
@@ -40,13 +38,11 @@ public class DataLoader implements CommandLineRunner {
         logger.info("Loaded Owners...");
 
         Vet vet1 = new Vet();
-        vet1.setId(1L);
         vet1.setFirstName("Mickey");
         vet1.setLastName("Mouse");
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(2L);
         vet2.setFirstName("Donald");
         vet2.setLastName("Duck");
         vetService.save(vet2);
