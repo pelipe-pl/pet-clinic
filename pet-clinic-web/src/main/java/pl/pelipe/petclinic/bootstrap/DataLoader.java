@@ -8,8 +8,6 @@ import pl.pelipe.petclinic.model.Owner;
 import pl.pelipe.petclinic.model.Vet;
 import pl.pelipe.petclinic.services.OwnerService;
 import pl.pelipe.petclinic.services.VetService;
-import pl.pelipe.petclinic.services.map.OwnerServiceMap;
-import pl.pelipe.petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -17,10 +15,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

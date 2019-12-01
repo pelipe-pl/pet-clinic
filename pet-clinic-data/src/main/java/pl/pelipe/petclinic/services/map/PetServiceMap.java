@@ -1,11 +1,12 @@
 package pl.pelipe.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pl.pelipe.petclinic.model.Pet;
-import pl.pelipe.petclinic.services.CrudService;
 import pl.pelipe.petclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
